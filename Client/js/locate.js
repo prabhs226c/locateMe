@@ -51,8 +51,9 @@ function getCityName(pos, update) {
             if (data.city) {
                 document.getElementById('currentLocation').innerText = "Latitude: " + pos.lat + ", Longitude: " + pos.lng + " City: " + data.city
 
-                if (update == 0) {
+                if (update != 1) {
                     createUpdateBtn()
+                    console.log(update)
                     saveToDB(pos.lat, pos.lng, data.city);
                 } else {
                     updateDb(pos.lat, pos.lng, data.city, getCookie())
@@ -119,6 +120,6 @@ function createUpdateBtn() {
     let btnText = document.createTextNode("Update Location")
     updateBtn.appendChild(btnText)
 
-    updateBtn.addEventListener("click", locateMe)
+    updateBtn.addEventListener("click", (e)=>{locateMe(1)})
     document.getElementById("results").appendChild(updateBtn)
 }
