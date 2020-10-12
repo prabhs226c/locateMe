@@ -1,0 +1,53 @@
+-- MySQL dump 10.13  Distrib 8.0.21, for Win64 (x86_64)
+--
+-- Host: localhost    Database: test_location
+-- ------------------------------------------------------
+-- Server version	8.0.21
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `location`
+--
+
+DROP TABLE IF EXISTS `location`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `location` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `latitude` decimal(10,5) DEFAULT NULL,
+  `longitude` decimal(10,5) DEFAULT NULL,
+  `city` varchar(150) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `location`
+--
+
+LOCK TABLES `location` WRITE;
+/*!40000 ALTER TABLE `location` DISABLE KEYS */;
+INSERT INTO `location` VALUES (8,45.43543,-73.63512,'Lasalle'),(9,45.43510,-73.63524,'Lasalle'),(10,45.43519,-73.63527,'Montreal'),(11,45.43516,-73.63521,'Montreal'),(12,45.43509,-73.63526,'Lasalle'),(13,45.43521,-73.63523,'Montreal'),(14,45.43505,-73.63522,'Lasalle'),(15,45.43522,-73.63526,'Montreal'),(16,45.43502,-73.63538,'Lasalle'),(17,45.43484,-73.63546,'Lasalle'),(18,45.43512,-73.63526,'Lasalle'),(19,45.43501,-73.63520,'Lasalle'),(20,45.43473,-73.63554,'Lasalle'),(21,45.43477,-73.63548,'Lasalle'),(22,45.43504,-73.63539,'Lasalle'),(23,45.43482,-73.63533,'Lasalle'),(24,45.43486,-73.63519,'Lasalle'),(25,45.43499,-73.63531,'Lasalle'),(26,45.43535,-73.63514,'Montreal'),(27,45.43503,-73.63519,'Lasalle'),(28,45.43502,-73.63531,'Lasalle'),(29,45.43494,-73.63513,'Lasalle'),(30,45.43490,-73.63510,'Lasalle'),(31,45.43506,-73.63507,'Lasalle'),(32,45.43489,-73.63545,'Lasalle'),(33,45.43457,-73.63533,'Châteauguay'),(34,45.43526,-73.63518,'Montreal'),(35,45.43481,-73.63545,'Lasalle'),(36,45.43523,-73.63514,'Montreal'),(37,45.43499,-73.63523,'Lasalle'),(38,45.43504,-73.63518,'Lasalle'),(39,45.43533,-73.63521,'Montreal'),(40,45.43498,-73.63542,'Lasalle');
+/*!40000 ALTER TABLE `location` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2020-10-12 14:29:45
